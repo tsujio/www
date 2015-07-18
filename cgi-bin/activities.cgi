@@ -46,6 +46,8 @@ my @contents = map {
 
 $tmpl->param(ACTIVITIES => \@contents);
 
+# Output
+print $q->header;
 print $tmpl->output();
 
 __DATA__
