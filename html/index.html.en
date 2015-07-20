@@ -8,28 +8,32 @@
     <header>
       <h1>Tsujio Lab.</h1>
     </header>
+
     <section>
       <h2>Members</h2>
       <ul>
-	<li>Naoki Tsujio</li>
+        <li>Naoki Tsujio</li>
       </ul>
     </section>
+
     <section>
       <h2>Products</h2>
       <dl>
-	<dt><a href="https://github.com/tsujio/webrtc-chord">webrtc-chord</a></dt>
-	<dd>An implementation of Chord using WebRTC. For all Web P2P developers.</dd>
-	<dt><a href="https://github.com/tsujio/webrtc-bbs">webrtc-bbs</a></dt>
-	<dd>A distributed BBS using WebRTC. It uses the webrtc-chord internally.</dd>
+        <dt><a href="https://github.com/tsujio/webrtc-chord">webrtc-chord</a></dt>
+        <dd>An implementation of Chord using WebRTC. For all Web P2P developers.</dd>
+        <dt><a href="https://github.com/tsujio/webrtc-bbs">webrtc-bbs</a></dt>
+        <dd>A distributed BBS using WebRTC. It uses the webrtc-chord internally.</dd>
       </dl>
     </section>
+
     <section>
       <h2>History</h2>
       <dl>
-	<dt><time>2015-06-27</time></dt>
-	<dd>Started</dd>
+        <dt><time>2015-06-27</time></dt>
+        <dd>Started</dd>
       </dl>
     </section>
+
     <footer>
       <p>Copyright &copy; 2015 Tsujio Laboratory</p>
     </footer>
