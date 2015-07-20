@@ -72,13 +72,14 @@ __DATA__
   <head>
     <meta charset="UTF-8">
     <title>活動記録</title>
+    <link rel="stylesheet" href="/css/activities.css">
   </head>
   <body>
     <h1>活動記録</h1>
 
     <TMPL_LOOP NAME=ACTIVITIES>
       <article>
-        <p><time datetime="<TMPL_VAR NAME=DATE>"><TMPL_VAR NAME=DATE_STR></time></p>
+        <p class="pubdate"><time datetime="<TMPL_VAR NAME=DATE>"><TMPL_VAR NAME=DATE_STR></time></p>
         <TMPL_VAR NAME=CONTENT>
       </article>
     </TMPL_LOOP>
