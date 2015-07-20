@@ -1,0 +1,28 @@
+body {
+    padding: 1em 2em;
+}
+
+header {
+    border-bottom: 1px solid silver;
+}
+
+dl {
+    padding-left: 1em;
+}
+
+dt {
+    margin-bottom: 0.3em;
+}
+
+dd {
+    margin-bottom: 0.5em;
+}
+
+p {
+    padding-left: 1em;
+}
+
+footer {
+    margin-top: 2em;
+    border-top: 1px solid silver;
+}
