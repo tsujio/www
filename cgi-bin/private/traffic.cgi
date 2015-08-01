@@ -22,6 +22,7 @@ $q->charset('utf-8');
 # Response Format
 my $res = {
   traffic => [],
+  referer => [],
 };
 
 # Aggregate
@@ -29,9 +30,16 @@ my $strp = DateTime::Format::Strptime->new(
   pattern => '%d/%b/%Y:%H:%M:%S %z', time_zone => 'local'
 );
 my $next_dt = undef;
+my %referer = ();
 open my $in, '-|', LOG2JSON or die "Failed to open " . LOG2JSON . ": $!";
 while (<$in>) {
   my $json = decode_json $_;
+
+  # Ignore access to non-content files
+  if ($json->{request} =~ /\.(?:css|js|ico) /) {
+    next;
+  }
+
   my $dt = $strp->parse_datetime($json->{time});
   $next_dt //= $dt->clone;
 
@@ -50,8 +58,16 @@ while (<$in>) {
 
   $next_dt = $dt->clone;
   $next_dt->add(days => 1);
+
+  # Referer
+  $referer{$json->{referer}} = 0 if !exists $referer{$json->{referer}};
+  $referer{$json->{referer}}++;
 }
 close $in or die "Failed to close " . LOG2JSON . ": $!";
+
+my @referer = sort { $b->[1] <=> $a->[1] }
+  map { [$_, $referer{$_}] } keys %referer;
+$res->{referer} = \@referer;
 
 # Output
 print $q->header('application/json');
