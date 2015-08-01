@@ -48,12 +48,12 @@ $(function() {
         return i * widthPerDate + padding + barPadding + widthPerDate / 2;
       })
       .attr("y", function(d) {
-        return yScale(d[1]) + 14;
+        return h - padding / 2;
       })
       .attr("text-anchor", "middle")
       .attr("font-family", "sans-serif")
       .attr("font-size", "11px")
-      .attr("fill", "white");
+      .attr("fill", "black");
 
     // Draw axis
     svg.append("g")
