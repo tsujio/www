@@ -1,0 +1,4 @@
+AuthType Digest
+AuthName "Member Only"
+AuthUserFile /etc/httpd/.htdigest
+Require user tsujio
