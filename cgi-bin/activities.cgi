@@ -10,11 +10,12 @@ use Text::Markdown 'markdown';
 use HTML::Template;
 use FindBin;
 use File::Spec::Functions 'catfile';
-use File::Basename 'basename';
+use File::Basename qw/basename dirname/;
 use DateTime;
 use Encode;
 
-use constant ACTIVITIES_DIR => catfile $FindBin::Bin, 'activities';
+use constant DATA_DIR => catfile dirname($FindBin::Bin), 'data';
+use constant ACTIVITIES_DIR => catfile DATA_DIR, 'activities';
 
 my $q = CGI->new;
 
