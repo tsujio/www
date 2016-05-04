@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>活動記録</title>
+    <link rel="stylesheet" href="/activities/css/activities.css">
+  </head>
+  <body>
+    <h1>活動記録</h1>
+
+    <TMPL_LOOP NAME=activities>
+      <article>
+        <p class="pubdate"><time datetime="<TMPL_VAR NAME=pubdate>"><TMPL_VAR NAME=date_hstr></time></p>
+        <TMPL_VAR NAME=html>
+      </article>
+    </TMPL_LOOP>
+  </body>
+</html>

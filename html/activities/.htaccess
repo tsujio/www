@@ -1,0 +1,8 @@
+Options +FollowSymLinks +ExecCGI
+AddHandler cgi-script cgi
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !\.(css|js)$
+RewriteCond %{REQUEST_FILENAME} !activities\.cgi$
+RewriteCond %{REQUEST_URI} ^(.*/activities)(/.*)?$
+RewriteRule ^.*$ %1/activities.cgi%2 [L]
