@@ -6,6 +6,11 @@ header {
     border-bottom: 1px solid silver;
 }
 
+header .languages {
+    list-style: none;
+    float: right;
+}
+
 dl {
     padding-left: 1em;
 }
