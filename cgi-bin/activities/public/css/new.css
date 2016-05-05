@@ -1,0 +1,33 @@
+body {
+    padding: 1em 2em;
+}
+
+.error {
+    border: 1px solid red;
+    color: red;
+    background-color: pink;
+    padding: 1em;
+}
+
+input[name="date"] {
+    width: 50%;
+}
+
+textarea[name="body"] {
+    width: 50%;
+    height: 20em;
+}
+
+input[name="password"] {
+    width: 50%;
+}
+
+.buttons {
+    padding-left: 0;
+    list-style: none;
+}
+
+.buttons li {
+    padding-right: 1em;
+    float: left;
+}

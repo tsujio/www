@@ -57,4 +57,12 @@ $app->get('/', sub {
   $c->render('activities', activities => $activities);
 });
 
+# Edit new activity
+$app->get('/new', sub {
+  my $c = shift;
+
+  my $today = DateTime->now(time_zone => 'local');
+  $c->render('new', date => $today->strftime('%Y%m%d'));
+});
+
 $app->run;
